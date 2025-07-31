@@ -1,0 +1,31 @@
+.app-bg {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(224, 233, 235, 0.581);
+  min-height: 100vh;
+}
+
+.app-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://plus.unsplash.com/premium_photo-1674834298045-e405bc99076b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2hpdGUlMjBza3l8ZW58MHx8MHx8fDA%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(12px);
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.app-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .app-bg {
+    background-image: none;
+  }
+  
+}
